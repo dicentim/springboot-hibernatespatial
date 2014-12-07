@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!--The logging message format for the entire eOCS project -->
+    <!--It must be used overall-->
+    <property name="LOG_PATTERN" value="[%d{yyyy-MM-dd HH:mm:ss.SSS}] %5p [%t] --- %c{1}: %m%n"/>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>utf-8</charset>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>build/reports/logs/log.log</file>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+        <prudent>true</prudent>
+    </appender>
+
+    <!--non eOCS logs -->
+    <logger name="org.apache" level="WARN"/>
+    <logger name="org.apache.catalina.startup.DigesterFactory" level="OFF"/>
+    <logger name="org.hibernate.validator" level="WARN"/>
+    <logger name="org.hibernate" level="WARN"/>
+    <logger name="org.hibernate.ejb.HibernatePersistence" level="OFF"/>
+    <logger name="org.springframework" level="WARN"/>
+    <logger name="org.springframework.web" level="WARN"/>
+    <logger name="org.springframework.security" level="WARN"/>
+    <logger name="org.springframework.cache" level="WARN"/>
+    <logger name="org.springframework.data" level="WARN"/>
+    <logger name="com.mangofactory.swagger" level="WARN"/>
+    <!-- logs the query parameters (use TRACE) -->
+    <logger name="org.hibernate.type" level="WARN"/>
+    <logger name="org.hibernate.stat" level="WARN"/>
+    <!--non eOCS logs -->
+
+
+    <logger name="edu.houyhnhnm" level="ALL">
+        <!--The "all" level is the lower logging level, using this you will see all the logging trays.-->
+        <appender-ref ref="FILE"/>
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+</configuration>
