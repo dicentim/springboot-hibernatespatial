@@ -1,15 +1,45 @@
-*.class
+**/build
+**/.settings
+**/.classpath
+**/src/main/webapp/lib
+**/generated
+**/target
+**/plugin.xml
+*.augmented.*
+**/*.ipr
+**/*.iws
+**/*.iml
+**/.gradle
+**/cert
+**/out
+**/.dev/
+**/.tmp/
+**/.DS_Store
+**/*.sublime-project
+**/*.sublime-workspace
+**/bower_components/
+**/node_modules/
+**/test/coverage/
+**/dist
+**/npm-debug.log
+!eocs-server-bootstrap/src/main/webapp/scripts
+**/scripts/**/*
+eocs-server-bootstrap/src/main/webapp/swagger
+eocs-server-bootstrap/data/
+es-data/
+es-test-data/
+data/
+.project
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+classes/
+logs/
+*.log
 
-# Package Files #
-*.jar
-*.war
-*.ear
+**/test-results.xml
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-
-git-init.bash
-
+.idea/*
+!.idea/vcs.xml
+!.idea/modules.xml
+!.idea/encodings.xml
+!.idea/codeStyleSettings.xml
+!.idea/runConfigurations
