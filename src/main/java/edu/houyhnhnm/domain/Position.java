@@ -1,5 +1,5 @@
 /*
- * Created by m1s on 8/9/14.
+ * Created by Donatello Dicentim on 8/9/14.
  */
 
 package edu.houyhnhnm.domain;
@@ -13,7 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * @author: Mihai
+ * @author: Donatello Dicentim
  */
 @Entity
 public class Position {
